@@ -1,0 +1,29 @@
+{
+  "env": {
+    "es6": true,
+    "node": true
+  },
+  "extends": ["airbnb-base", "eslint-config-prettier"],
+  "globals": {
+    "Atomics": "readonly",
+    "SharedArrayBuffer": "readonly"
+  },
+  "parserOptions": {
+    "ecmaVersion": 2018,
+    "sourceType": "module"
+  },
+  "plugins": [],
+  "rules": {
+    /*"linebreak-style": ["error", "windows"]*/
+    // "prettier/prettier": ["error"],
+    "prefer-destructuring": [
+      "error",
+      {
+        "object": true,
+        "array": false
+      }
+    ],
+    "no-param-reassign": 0,
+    "linebreak-style": 0
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "name": "express-back-end",
+  "main": "server.js",
+  "author": "autloop",
+  "scripts": {
+    "go": "nodemon server.js",
+    "knex": "knex migrate:rollback && knex migrate:latest && knex seed:run && nodemon server.js",
+    "git": "git add . && git diff-index --quiet HEAD || git commit -m ",
+    "postgit": "git push -u origin HEAD",
+    "heroku": "npm run git deploy && git push heroku master && heroku run knex migrate:rollback && heroku run knex migrate:latest && heroku run knex seed:run",
+    "docs": "./node_modules/.bin/jsdoc -c jsdoc.json",
+    "start": "node server.js",
+    "source": "git archive -v -o autloop.zip --format=zip HEAD"
+  },
+  "dependencies": {
+    "bcrypt": "^3.0.7",
+    "body-parser": "^1.18.3",
+    "compression": "^1.7.4",
+    "cors": "^2.8.5",
+    "countries-and-timezones": "^2.0.3",
+    "dotenv": "^8.0.0",
+    "event-stream": "^4.0.1",
+    "express": "^4.16.4",
+    "jsonwebtoken": "^8.5.1",
+    "knex": "^0.17.6",
+    "knex-logger": "^0.1.0",
+    "moment": "^2.24.0",
+    "moment-timezone": "^0.5.27",
+    "node-fetch": "^2.6.0",
+    "nodemailer": "^6.3.0",
+    "nodemon": "^1.19.1",
+    "passport": "^0.4.0",
+    "passport-jwt": "^4.0.0",
+    "passport-local": "^1.0.0",
+    "request": "^2.88.0",
+    "universal-cookie-express": "^4.0.3"
+  },
+  "devDependencies": {
+    "eslint": "^6.2.2",
+    "eslint-config-airbnb-base": "^14.0.0",
+    "eslint-plugin-import": "^2.18.2",
+    "eslint-config-prettier": "^6.7.0",
+    "jsdoc": "^3.6.3"
+  }
+}

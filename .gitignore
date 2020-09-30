@@ -1,0 +1,10 @@
+node_modules/
+/.env
+# assets/
+/dummy.js
+# /assets/logo/
+
+#documentation 
+/docs
+/quick-start-combined.log
+/quick-start-error.log
